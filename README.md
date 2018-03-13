@@ -1,3 +1,3 @@
 # Embedded Images Saver
-
-Some description of project.
+g
+Нужно взять HTML-код, содержащий embedded-изображения, и сохранить эти картинки как файлы.
