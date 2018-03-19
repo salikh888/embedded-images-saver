@@ -1,6 +1,5 @@
 <?php
 require_once 'htmlParser.php';
-require_once 'searchAndReplace.php';
 /**
  * Encode base64 given array
  * @param $arrayBase64String array list of the strings
@@ -17,14 +16,10 @@ function base64StringToFile($arrayBase64String, $pathToSave)
         $FileExtension = substr($arrayFileExtensionAndBase64[0], 6);
         $FileExtension = explode(";", $FileExtension);
         $extension = $FileExtension[0];
-//            print_r($extension.'<br>');
-//            print_r($imageName.'<br>');
         $imageNameMd5 = md5(base64_decode($base64));
         $imageName = $pathToSave . $imageNameMd5 . "." . $extension;
         $result[] = $imageName;
-//            print_r($result);
-//            print_r($tmpImageName);
-//            md5(base64_decode($base64))
+
         if (file_exists($imageName)){
             echo $imageName.'Уже сушествует';
         }
