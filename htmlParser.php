@@ -1,6 +1,4 @@
 <?php
-//require_once 'base64ToImage.php';
-//require_once 'searchAndReplace.php';
 function htmlParsToArray($html)
 {
     $htmlDocument = file_get_contents($html);
@@ -11,7 +9,6 @@ function htmlParsToArray($html)
         $base64String = trim(trim($base64StringWithTrash), '".." ');
         $arrayBase64String[] = $base64String;
     }
-
     return $arrayBase64String;
 }
 
